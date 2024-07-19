@@ -1,0 +1,137 @@
+@use "../../styles/partials/global" as *;
+
+.inventory-item {
+	padding: 0 1.5rem 1rem 1.5rem;
+	border-bottom: 1px solid $Cloud;
+	display: flex;
+	flex-wrap: wrap;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	@include tablet {
+		flex-wrap: nowrap;
+		align-items: center;
+		padding: 0.75rem 2rem 0.4rem 2rem;
+	}
+
+	@include desktop {
+		flex-wrap: nowrap;
+		padding: 0.75rem 2.5rem 0.4rem 2.5rem;
+	}
+
+	&__chevron {
+		width: 1.25rem;
+		height: 1.25rem;
+		margin-left: 0.25rem;
+	}
+
+	&__header {
+		margin-bottom: 0.25rem;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__wrapper {
+		width: 50%;
+		margin-bottom: 0.5rem;
+
+		a {
+			display: flex;
+			align-items: center;
+
+			p {
+				display: inline;
+				margin: 0;
+				font-weight: 600;
+			}
+		}
+
+		p {
+			margin: 0;
+			@include tablet {
+				font-size: 0.875rem;
+			}
+		}
+	}
+}
+
+.flex-1 {
+	@include tablet {
+		order: 1;
+	}
+}
+
+.flex-0 {
+	@include tablet {
+		order: 0;
+	}
+}
+
+.flex-2 {
+	@include tablet {
+		order: 2;
+	}
+}
+
+.col-1 {
+	min-width: 23.5%;
+}
+
+.col-2 {
+	min-width: 19%;
+	@include desktop {
+		min-width: 18.5%;
+	}
+}
+
+.col-3 {
+	min-width: 28.5%;
+
+	@include desktop {
+		min-width: 27.5%;
+	}
+}
+.col-4 {
+	min-width: 22%;
+}
+.col-5 {
+	min-width: 10%;
+}
+
+.action-buttons {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-top: 1rem;
+
+	@include tablet {
+		margin-top: 0;
+		width: 1.5rem;
+		height: 1.5rem;
+		justify-content: flex-start;
+		gap: 0.75rem;
+		margin-left: -1rem;
+		padding-bottom: 1rem;
+
+		@include desktop {
+			justify-content: center;
+			margin: 0;
+			gap: 1rem;
+		}
+	}
+}
+
+.inventory__empty-header {
+	padding-left: 1rem;
+}
+
+.delete-icon,
+.edit-icon {
+	cursor: pointer;
+	width: 1.5rem;
+	height: 1.5rem;
+}

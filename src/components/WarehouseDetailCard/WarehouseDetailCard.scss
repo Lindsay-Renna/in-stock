@@ -1,0 +1,62 @@
+@use "../../styles/partials/global" as *;
+
+.details {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid $Cloud;
+	padding: 1rem 1.5rem;
+
+	@include tablet {
+		padding: 1rem 2rem;
+		flex-wrap: nowrap;
+		border-bottom: none;
+	}
+
+	&__header {
+		margin: 0 0 0.25rem 0;
+		color: $Slate;
+	}
+
+	&__address {
+		width: 100%;
+
+		@include tablet {
+			width: 50%;
+			border-right: 1px solid $Cloud;
+			padding-right: 2rem;
+		}
+
+		p {
+			display: inline;
+
+			@include tablet {
+				display: block;
+				width: 65%;
+				white-space: collapse balance;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		width: 100%;
+
+		margin-top: 2.5rem;
+
+		@include tablet {
+			margin: 0 0 0 2rem;
+		}
+	}
+
+	&__contact {
+		width: 50%;
+	}
+
+	p {
+		margin: 0;
+
+		@include tablet {
+			font-size: 0.875rem;
+		}
+	}
+}

@@ -1,0 +1,226 @@
+[
+	{
+		"id": 1,
+		"warehouse": "Mushroom",
+		"address": "123 Peach Avenue, Mushroom Kingdom",
+		"contact": "Toad",
+		"title": "Warehouse Manager",
+		"phone": "123-456-7890",
+		"email": "toad@mushroom.com",
+		"inventory": [
+			{
+				"id": "002",
+				"item": "Mushroom",
+				"category": "Power-ups",
+				"status": "IN STOCK",
+				"quantity": 100
+			},
+			{
+				"id": "22",
+				"item": "Fire Flower",
+				"category": "Power-ups",
+				"status": "OUT OF STOCK",
+				"quantity": 0
+			},
+			{
+				"id": "33",
+				"item": "1-Up Mushroom",
+				"category": "Extra Life",
+				"status": "IN STOCK",
+				"quantity": 50
+			},
+			{
+				"id": "44",
+				"item": "Star",
+				"category": "Power-ups",
+				"status": "IN STOCK",
+				"quantity": 25
+			},
+			{
+				"id": "05501",
+				"item": "Super Mushroom",
+				"category": "Power-ups",
+				"status": "IN STOCK",
+				"quantity": 100
+			},
+			{
+				"id": "66",
+				"item": "Super Mushroom",
+				"category": "Power-ups",
+				"status": "IN STOCK",
+				"quantity": 100
+			},
+			{
+				"id": "07701",
+				"item": "Super Mushroom",
+				"category": "Power-ups",
+				"status": "IN STOCK",
+				"quantity": 100
+			},
+			{
+				"id": "08801",
+				"item": "Super Mushroom",
+				"category": "Power-ups",
+				"status": "IN STOCK",
+				"quantity": 100
+			}
+		]
+	},
+	{
+		"id": 2,
+		"warehouse": "Bowser's Castle",
+		"address": "456 Koopa Road, Dark Land",
+		"contact": "Bowser Jr.",
+		"title": "Warehouse Manager",
+		"phone": "234-567-8901",
+		"email": "bowserjr@darkland.com",
+		"inventory": [
+			{
+				"id": "001",
+				"item": "Koopa Shell",
+				"category": "Enemies",
+				"status": "IN STOCK",
+				"quantity": 300
+			},
+			{
+				"id": "001",
+				"item": "Bob-omb",
+				"category": "Enemies",
+				"status": "IN STOCK",
+				"quantity": 150
+			},
+			{
+				"id": "001",
+				"item": "Thwomp",
+				"category": "Obstacles",
+				"status": "OUT OF STOCK",
+				"quantity": 0
+			},
+			{
+				"id": "001",
+				"item": "Lava Bubble",
+				"category": "Obstacles",
+				"status": "IN STOCK",
+				"quantity": 200
+			}
+		]
+	},
+	{
+		"id": 3,
+		"warehouse": "Yoshi's Island",
+		"address": "789 Yoshi Street, Yoshi's Island",
+		"contact": "Yoshi",
+		"title": "Warehouse Manager",
+
+		"phone": "345-678-9012",
+		"email": "yoshi@yoshisisland.com",
+		"inventory": [
+			{
+				"id": "001",
+				"item": "Yoshi Egg",
+				"category": "Characters",
+				"status": "IN STOCK",
+				"quantity": 80
+			},
+			{
+				"id": "001",
+				"item": "Fruit",
+				"category": "Food",
+				"status": "IN STOCK",
+				"quantity": 120
+			},
+			{
+				"id": "001",
+				"item": "Cloud Platform",
+				"category": "Platforms",
+				"status": "IN STOCK",
+				"quantity": 30
+			},
+			{
+				"id": "001",
+				"item": "Buzzy Beetle",
+				"category": "Enemies",
+				"status": "OUT OF STOCK",
+				"quantity": 0
+			}
+		]
+	},
+	{
+		"id": 4,
+		"warehouse": "Luigi's Mansion",
+		"address": "101 Boo Boulevard, Evershade Valley",
+		"contact": "Luigi",
+		"title": "Warehouse Manager",
+		"phone": "456-789-0123",
+		"email": "luigi@evershadevalley.com",
+		"inventory": [
+			{
+				"id": "001",
+				"item": "Poltergust 3000",
+				"category": "Equipment",
+				"status": "IN STOCK",
+				"quantity": 10
+			},
+			{
+				"id": "001",
+				"item": "Gold Bar",
+				"category": "Treasures",
+				"status": "IN STOCK",
+				"quantity": 200
+			},
+			{
+				"id": "001",
+				"item": "Green Gem",
+				"category": "Treasures",
+				"status": "IN STOCK",
+				"quantity": 15
+			},
+			{
+				"id": "001",
+				"item": "Boo",
+				"category": "Enemies",
+				"status": "OUT OF STOCK",
+				"quantity": 0
+			}
+		]
+	},
+	{
+		"id": 5,
+		"warehouse": "Donkey Kong Island",
+		"address": "202 Banana Bungalow, Donkey Kong Island",
+		"contact": "Donkey Kong",
+		"title": "Warehouse Manager",
+		"phone": "567-890-1234",
+		"email": "dk@donkeykongisland.com",
+		"inventory": [
+			{
+				"id": "001",
+				"item": "Banana",
+				"category": "Food",
+				"status": "IN STOCK",
+				"quantity": 1000
+			},
+			{
+				"id": "001",
+				"item": "Barrel",
+				"category": "Containers",
+				"status": "IN STOCK",
+				"quantity": 50
+			},
+			{
+				"id": "001",
+				"item": "Golden Banana",
+				"category": "Treasures",
+				"status": "OUT OF STOCK",
+				"quantity": 0
+			},
+			{
+				"id": "001",
+				"item": "Kong Token",
+				"category": "Collectibles",
+				"status": "IN STOCK",
+				"quantity": 75
+			}
+		]
+	}
+]

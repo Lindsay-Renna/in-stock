@@ -1,0 +1,240 @@
+@use "../../styles/partials/global" as *;
+
+.edit-item {
+	&__header {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding: 1.75rem 0.5rem 1.75rem 0.5rem;
+
+		@include tablet {
+			padding: 1.75rem 1.5rem 1.8rem 1.5rem;
+		}
+	}
+
+	&__back-link {
+		color: $Instock-Indigo;
+		margin-right: 0.2rem;
+
+		@include tablet {
+			padding-right: 0.1rem;
+		}
+		@include desktop {
+			padding-right: 0.1rem;
+		}
+	}
+
+	&__back-icon {
+		width: 24px;
+		height: 24px;
+		margin-top: 7px;
+	}
+
+	&__title {
+		font-size: 1.75rem;
+		line-height: 2rem;
+		font-weight: 600;
+		color: $Instock-Black;
+		margin: 0;
+		flex-grow: 1;
+
+		@include tablet {
+			font-size: 2rem;
+		}
+		@include desktop {
+			font-size: 2rem;
+		}
+	}
+
+	&__divider {
+		border-top: 1px solid $Cloud;
+	}
+
+	&__divider--vertical {
+		@include tablet {
+			display: block;
+			width: 1px;
+			background-color: $Cloud;
+			margin: 1rem 0;
+		}
+	}
+
+	&__columns {
+		display: flex;
+		flex-direction: column;
+
+		@include tablet {
+			flex-direction: row;
+		}
+	}
+
+	&__column {
+		flex: 1;
+		padding: 1rem;
+
+		@include tablet {
+			padding: 2rem 1.5rem;
+		}
+	}
+
+	&__section-title {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: $Instock-Black;
+		margin: 0;
+		margin-bottom: 1.5rem;
+
+		@include tablet {
+			font-size: 1.5rem;
+			margin-bottom: 1.75rem;
+		}
+	}
+
+	&__form-group {
+		margin-top: 0.5rem;
+	}
+
+	&__label {
+		font-size: 0.8125rem;
+		line-height: 1.25rem;
+		font-weight: 600;
+		color: $Instock-Black;
+
+		@include tablet {
+			font-size: 0.875rem;
+		}
+	}
+
+	&__input {
+		width: 86%;
+		height: 2.25rem;
+		padding: 0 1rem;
+		border-radius: 20px;
+		border: 1px solid $Cloud;
+		font-size: 0.8125rem;
+		font-weight: 400;
+		color: $Instock-Black;
+		font-family: "Titillium", Verdana, Geneva, Tahoma, sans-serif;
+		outline: none;
+		transition: border-color 0.3s;
+		margin: 0.25rem 0 0.5rem 0;
+
+		@include tablet {
+			height: 2.375rem;
+			width: 85%;
+			margin-bottom: 1.15rem;
+		}
+
+		@include desktop {
+			width: 90%;
+		}
+	}
+
+	&__textarea {
+		width: 86%;
+		padding: 0 1rem;
+		border-radius: 20px;
+		border: 1px solid $Cloud;
+		font-size: 0.8125rem;
+		font-weight: 400;
+		color: $Instock-Black;
+		font-family: "Titillium", Verdana, Geneva, Tahoma, sans-serif;
+		outline: none;
+		transition: border-color 0.3s;
+		margin: 0.25rem 0 0.5rem 0;
+
+		@include tablet {
+			width: 85%;
+			padding-top: 0.5rem;
+		}
+		@include desktop {
+			width: 90%;
+		}
+	}
+
+	&__select {
+		width: 100%;
+		height: 2.25rem;
+		padding: 0 1rem;
+		border-radius: 20px;
+		border: 1px solid $Cloud;
+		font-size: 0.8125rem;
+		font-weight: 400;
+		color: $Instock-Black;
+		font-family: "Titillium", Verdana, Geneva, Tahoma, sans-serif;
+		outline: none;
+		transition: border-color 0.3s;
+		margin: 0.25rem 0 0.3rem 0;
+		appearance: none;
+		background-image: url("/src/assets/icons/arrow_drop_down-24px.svg");
+		background-repeat: no-repeat;
+		background-position: right 0.7rem top 50%;
+		background-size: 1.5rem 1.5rem;
+
+		&::placeholder {
+			color: $Slate;
+			font-family: "Titillium", Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 0.8125rem;
+
+			@include tablet {
+				font-size: 0.875rem;
+			}
+		}
+	}
+
+	&__availability {
+		padding: 1rem;
+	}
+
+	&__textarea {
+		resize: vertical;
+		height: 7.5rem;
+	}
+
+	&__radio-group {
+		display: flex;
+		gap: 1rem;
+	}
+
+	&__radio-label {
+		display: flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.8125rem;
+	}
+
+	&__buttons {
+		@include flex-center-both;
+		gap: 10px;
+		background-color: $Light-Grey;
+		padding: 1rem;
+
+		@include tablet {
+			justify-content: end;
+			padding: 1rem 1.5rem;
+		}
+
+		.edit-item__button {
+			padding: 0.5rem 2.7rem;
+			cursor: pointer;
+			font-family: "Titillium", Verdana, Geneva, Tahoma, sans-serif;
+			border-radius: 20px;
+			font-size: 13px;
+			font-weight: 600;
+			width: 45%;
+
+			@include tablet {
+				padding: 0.5rem 1rem;
+				font-size: 14px;
+				width: 4.5rem;
+			}
+			&--cancel {
+				@include white-button;
+			}
+
+			&--save {
+				@include blue-button;
+			}
+		}
+	}
+}

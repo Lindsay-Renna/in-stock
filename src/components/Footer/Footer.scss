@@ -1,0 +1,13 @@
+@use "../../styles/partials/global" as *;
+
+.copyright {
+	background-color: $Light-Grey;
+	height: 5.375rem;
+	font-size: 0.6875rem;
+	margin: 0.5rem 0 0 0;
+	@include flex-center-both;
+
+	@include tablet {
+		font-size: 0.75rem;
+	}
+}

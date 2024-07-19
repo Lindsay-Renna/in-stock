@@ -1,0 +1,183 @@
+@use "../../styles/partials/global" as *;
+
+.inventory-page-item {
+	padding: 0 1.5rem 1.5rem 1.5rem;
+	border-bottom: 1px solid $Cloud;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 0.9em;
+	&:last-child {
+		border-bottom: none;
+	}
+
+	@include tablet {
+		flex-wrap: nowrap;
+		align-items: center;
+		padding: 1rem 2rem 0 2rem;
+	}
+
+	@include desktop {
+		flex-wrap: nowrap;
+		padding: 1rem 2.5rem 0 2.5rem;
+	}
+
+	&__header {
+		margin: 1rem 0 0.3rem 0;
+
+		color: $Slate;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__wrapper {
+		width: 50%;
+		margin-bottom: -0.1rem;
+
+		@include tablet {
+			margin-bottom: 1rem;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+
+			p {
+				display: inline;
+				margin: 0;
+				font-weight: 600;
+
+				@include tablet {
+					font-size: 0.875rem;
+				}
+			}
+		}
+
+		p {
+			margin: 0;
+			@include tablet {
+				font-size: 0.875rem;
+			}
+		}
+	}
+}
+
+.inventory-page-item {
+	.inventory-page-flex-1 {
+		@include tablet {
+			order: 1;
+		}
+	}
+
+	.inventory-page-flex-0 {
+		@include tablet {
+			order: 0;
+		}
+	}
+
+	.inventory-page-flex-2 {
+		@include tablet {
+			order: 2;
+		}
+	}
+
+	.inventory-page-col-1 {
+		min-width: 23.5%;
+
+		@include desktop {
+			min-width: 23%;
+		}
+	}
+	.inventory-page-col-2 {
+		min-width: 19%;
+
+		@include tablet {
+			min-width: 19%;
+			max-width: 19%;
+		}
+
+		@include desktop {
+			max-width: none;
+			min-width: 18.5%;
+		}
+	}
+	.inventory-page-col-3 {
+		min-width: 28.5%;
+
+		@include tablet {
+			min-width: 18%;
+		}
+
+		@include desktop {
+			min-width: 20%;
+		}
+	}
+	.inventory-page-col-4 {
+		min-width: 22%;
+
+		@include tablet {
+			min-width: 9.5%;
+			max-width: 9.5%;
+		}
+
+		@include desktop {
+			min-width: 10.6%;
+			max-width: none;
+		}
+	}
+	.inventory-page-col-5 {
+		min-width: 50%;
+
+		@include tablet {
+			display: none;
+		}
+	}
+	.inventory-page-col-6 {
+		min-width: 50%;
+
+		@include tablet {
+			min-width: 7%;
+		}
+
+		@include desktop {
+			min-width: 19%;
+		}
+	}
+	.inventory-page-col-7 {
+		@include tablet {
+			min-width: 10.5%;
+		}
+
+		@include desktop {
+			min-width: 11%;
+		}
+	}
+
+	.inventory-page-action-buttons {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		margin-top: 1rem;
+
+		@include tablet {
+			margin-top: 0;
+			width: 1.5rem;
+			height: 1.5rem;
+			justify-content: flex-start;
+			gap: 0.75rem;
+			margin-left: -1rem;
+			padding-bottom: 1rem;
+
+			@include desktop {
+				gap: 1rem;
+			}
+		}
+	}
+	.delete-icon,
+	.edit-icon {
+		cursor: pointer;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}

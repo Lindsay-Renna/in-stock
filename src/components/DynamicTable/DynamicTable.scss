@@ -1,0 +1,145 @@
+@use "../../styles/partials/global" as *;
+
+.dynamic-table {
+	width: 100%;
+	overflow-x: auto;
+
+	&__sort-icon {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	&__chevron-icon {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	&__table {
+		width: 100%;
+		border-collapse: collapse;
+		display: table;
+		table-layout: fixed;
+	}
+
+	&__thead {
+		background-color: $Light-Grey;
+	}
+
+	&__th {
+		&__content {
+			display: flex;
+			align-items: center;
+			color: $Slate;
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+	}
+
+	&__tr {
+		padding: 0 2rem;
+		&:hover {
+			background: #2e66e512;
+		}
+		&:not(:first-child) {
+			border-top: 1px solid $Cloud;
+		}
+	}
+
+	&__td {
+		color: $Instock-Black;
+		font-size: 13px;
+
+		p {
+			margin: 0;
+		}
+
+		@include tablet {
+			font-size: 14px;
+		}
+	}
+
+	&__th,
+	&__td {
+		padding: 1rem 1rem;
+		text-align: left;
+
+		@include tablet {
+			&:first-child {
+				padding-left: 2rem;
+			}
+			&:last-child {
+				padding-right: 2rem;
+			}
+		}
+	}
+
+	& .actions {
+		display: flex;
+		gap: 10px;
+	}
+
+	@include mobile {
+		&__table,
+		&__thead,
+		&__tbody,
+		&__th,
+		&__td,
+		&__tr {
+			display: block;
+		}
+
+		&__thead {
+			display: none;
+		}
+
+		&__tr {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+			padding: 2rem;
+			border-top: 1px solid $Cloud;
+			background-color: #fff;
+		}
+
+		&__td {
+			position: relative;
+			text-align: left;
+			border: none;
+			padding: 0;
+
+			&:before {
+				font-weight: bold;
+				font-size: 11px;
+				color: $Slate;
+				content: attr(data-label);
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+
+			& > * {
+				display: block;
+				margin-top: 5px;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+
+		& .actions {
+			flex-direction: row;
+
+			&__button--delete {
+				position: absolute;
+				left: 0;
+				bottom: -1rem;
+			}
+
+			&__button--edit {
+				position: absolute;
+				right: 0;
+				bottom: -1rem;
+			}
+		}
+	}
+}

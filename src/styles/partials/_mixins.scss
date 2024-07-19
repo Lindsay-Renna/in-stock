@@ -1,0 +1,92 @@
+@use "./variables" as *;
+
+@mixin mobile {
+  @media (max-width: calc($tablet-breakpoint - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center-both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin blue-button {
+  background-color: $Instock-Indigo;
+  color: $White;
+  border-radius: 20px;
+  border: none;
+  font-family: "Titillium";
+  font-weight: 600;
+
+  &:hover {
+    background-color: $Graphite;
+  }
+}
+
+@mixin white-button {
+  background-color: $White;
+  color: $Instock-Black;
+  border-radius: 20px;
+  border: 1px solid $Cloud;
+  font-family: "Titillium";
+  font-weight: 600;
+
+  &:hover {
+    border: 1px solid $Instock-Indigo;
+    color: $Instock-Indigo;
+  }
+}
+
+@mixin red-button {
+  background-color: $Red;
+  color: $White;
+  border-radius: 20px;
+  border: none;
+  font-family: "Titillium";
+  font-weight: 600;
+
+  &:hover {
+    background-color: $Graphite;
+  }
+}
+
+@mixin first-half-of-nth($maxNumber) {
+  &:nth-child(n + 2):last-child {
+    @content;
+  }
+  @for $n from 3 through $maxNumber {
+    &:nth-child(n + #{$n}):nth-last-child(-n + #{$n}) {
+      @content;
+    }
+  }
+}
+
+@mixin last-half-of-nth($maxNumber) {
+  &:first-child:last-child {
+    @content;
+  }
+  @for $n from 2 through $maxNumber {
+    &:nth-child(n + #{$n}):nth-last-child(-n + #{$n}) {
+      @content;
+    }
+  }
+}

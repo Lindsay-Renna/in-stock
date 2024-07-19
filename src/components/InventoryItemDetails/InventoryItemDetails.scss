@@ -1,0 +1,241 @@
+@use "../../styles/partials/global" as *;
+
+.content-box {
+	min-height: 10rem;
+}
+
+.item-details {
+	&__header {
+		display: flex;
+		align-items: center;
+		padding: 1.3rem 1rem;
+
+		@include tablet {
+			padding: 1.65rem 1.5rem 1.5rem 1.5rem;
+		}
+		@include desktop {
+			padding: 1.75rem 2rem;
+		}
+	}
+
+	&__back-link {
+		text-decoration: none;
+		padding-right: 0.2rem;
+	}
+
+	&__back-icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 0.3rem;
+		margin-top: 0.5rem;
+
+		@include tablet {
+			margin-top: 0.8rem;
+		}
+	}
+
+	&__title {
+		font-size: 1.75rem;
+		font-weight: 600;
+		margin: 0;
+
+		@include tablet {
+			font-size: 2rem;
+		}
+	}
+
+	&__edit-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		background-color: $Instock-Indigo;
+		border-radius: 50%;
+		margin-left: auto;
+		position: relative;
+
+		span {
+			color: $White;
+			font-size: 0.875rem;
+			padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+			@include mobile {
+				display: none;
+			}
+		}
+
+		@include tablet {
+			width: auto;
+			height: auto;
+			padding: 0.2rem 0.6rem;
+			background-color: $Instock-Indigo;
+			border-radius: 20px;
+			color: $White;
+			font-size: 1rem;
+			font-weight: 600;
+			margin-left: auto;
+			margin-top: 0.2rem;
+		}
+	}
+
+	&__edit-icon {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	&__edit-text {
+		display: none;
+		@include tablet {
+			display: inline;
+			margin-left: 0.1rem;
+			color: $White;
+			font-size: 14px;
+			font-family: "Titillium", Verdana, Geneva, Tahoma, sans-serif;
+			padding: 0 0.2rem;
+		}
+	}
+
+	&__divider {
+		height: 1px;
+		background-color: $Cloud;
+		width: 100%;
+
+		&--vertical {
+			height: auto;
+			width: 1px;
+			background-color: $Cloud;
+			margin: 1rem 1rem;
+		}
+	}
+
+	&__content {
+		padding: 1rem;
+
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			padding: 0;
+		}
+
+		p {
+			margin-bottom: 1rem;
+			color: $Slate;
+		}
+	}
+
+	&__description {
+		@include tablet {
+			flex: 1;
+			padding: 1.5rem;
+		}
+		@include desktop {
+			padding: 1.75rem 2rem;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+
+		@include tablet {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			padding: 1.5rem;
+		}
+		@include desktop {
+			padding: 1.75rem 2rem;
+		}
+	}
+
+	&__info-item {
+		margin-bottom: 1rem;
+		flex: 1;
+
+		@include tablet {
+			font-size: 12px;
+		}
+
+		strong {
+			display: block;
+			color: $Slate;
+			font-size: 0.6875rem;
+
+			@include tablet {
+				font-size: 0.75rem;
+				flex: 1;
+				padding-top: 0.3rem;
+			}
+			@include desktop {
+				font-size: 0.875rem;
+			}
+		}
+	}
+
+	&__info-item2 {
+		display: block;
+		font-weight: 400;
+		font-size: 0.8125rem;
+		color: $Instock-Black;
+		margin-top: 0;
+
+		@include tablet {
+			font-size: 0.875rem;
+		}
+	}
+
+	&__status-quantity {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 1rem;
+
+		@include tablet {
+			flex: 1;
+			flex-direction: row;
+		}
+	}
+
+	&__status {
+		display: inline-block;
+		padding: 0.2rem 0.5rem;
+		border-radius: 20px;
+		font-size: 0.6875rem;
+		font-weight: 600;
+
+		&--in-stock {
+			background-color: rgba(21, 132, 99, 0.07);
+			color: $Green;
+		}
+		&--out-of-stock {
+			background-color: rgba(201, 69, 21, 0.07);
+			color: $Red;
+		}
+	}
+
+	&__info-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include tablet {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		> div {
+			flex: 1;
+			&:first-child {
+				margin-right: 1rem;
+			}
+
+			@include tablet {
+				flex: 1;
+			}
+		}
+	}
+}
+.spacer {
+	min-height: 32rem;
+}

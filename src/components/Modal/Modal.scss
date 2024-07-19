@@ -1,0 +1,110 @@
+@use "../../styles/partials/global" as *;
+
+.modal {
+	padding: 1rem 1rem 2.5rem 1rem;
+	box-sizing: border-box;
+	position: fixed;
+	background-color: $White;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	@include tablet {
+		height: 16.375rem;
+		width: 42rem;
+		top: 19.75rem;
+		left: 50%;
+		border-radius: 4px;
+		box-shadow: 0 2px 5px $Instock-Black-10;
+		padding: 1rem 1rem 2.5rem 2rem;
+	}
+
+	@include desktop {
+		width: 42rem;
+		height: 16.375rem;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&__closer {
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+		cursor: pointer;
+	}
+
+	&__children {
+		min-height: 92%;
+
+		@include tablet {
+			min-height: 70%;
+			padding: 0 4rem 0 2rem;
+		}
+	}
+
+	&__buttons {
+		@include flex-center-horizontal;
+		gap: 1rem;
+
+		@include tablet {
+			justify-content: flex-end;
+			padding-right: 4rem;
+		}
+	}
+
+	&__header {
+		font-size: 1.75rem;
+
+		@include tablet {
+			margin: 0;
+			font-size: 2rem;
+		}
+	}
+
+	&__text {
+		font-size: 1rem;
+		line-height: 1.625rem;
+
+		@include tablet {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.modalOverlay {
+	@include tablet {
+		position: fixed;
+		background-color: $Instock-Black-75;
+		@include flex-center-both;
+		z-index: 1001;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+.delete-button,
+.cancel-button {
+	padding: 0.5rem 3.8rem;
+	cursor: pointer;
+	font-size: 0.8125rem;
+
+	@include tablet {
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+	}
+}
+
+.line-break {
+	display: none;
+
+	@include tablet {
+		display: block;
+	}
+}

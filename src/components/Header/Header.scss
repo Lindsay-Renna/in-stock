@@ -1,0 +1,106 @@
+@use "../../styles/partials/global" as *;
+
+.navbar {
+	background-color: $Graphite;
+	display: flex;
+	height: 12.5rem;
+
+	@include tablet {
+		height: 11.625rem;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+		padding-top: 1.5rem;
+
+		@include tablet {
+			flex-direction: row;
+			justify-content: space-between;
+			height: 92px;
+			padding-top: 0.55rem;
+			margin: 0 2rem;
+		}
+		@include desktop {
+			margin: 0 8rem;
+		}
+	}
+
+	&__logo-container {
+		margin-bottom: 0px;
+
+		@include tablet {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__img {
+		height: 1.75rem;
+		margin-bottom: 0.25rem;
+
+		@include tablet {
+			margin-bottom: 0;
+		}
+	}
+
+	&__links {
+		width: 100%;
+		@include flex-center-both;
+
+		@include tablet {
+			justify-content: flex-end;
+			width: 30%;
+		}
+
+		.navbar__list {
+			@include flex-center-both;
+			padding: 0;
+			margin: 1rem 1rem 0 1rem;
+
+			width: 100%;
+
+			@include tablet {
+				justify-content: flex-end;
+				padding-bottom: 1.25rem;
+				margin: 0;
+			}
+
+			li {
+				width: 50%;
+				text-align: center;
+				border-radius: 20px;
+				padding: 0.5rem 0;
+				color: $Cloud;
+
+				&.active {
+					background-color: $Instock-Black;
+					color: $White;
+				}
+			}
+		}
+
+		.navbar__link {
+			box-sizing: border-box;
+			font-weight: 600;
+			font-size: 0.8125rem;
+			border-radius: 20px;
+			color: $Cloud;
+			transition: background-color 0.3s, color 0.3s;
+			min-width: 10.25rem;
+
+			&.active {
+				color: $White;
+			}
+
+			&:hover {
+				color: $White;
+			}
+
+			@include tablet {
+				font-size: 14px;
+			}
+		}
+	}
+}

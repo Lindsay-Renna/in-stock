@@ -1,0 +1,37 @@
+@use "../../styles/partials/global" as *;
+
+.warehouse__save-button {
+	@include blue-button;
+
+	@include tablet {
+		width: 4rem;
+	}
+}
+
+.warehouse__form-group {
+	label {
+		margin-bottom: 0.25rem;
+	}
+
+	input {
+		font-family: "Titillium";
+	}
+}
+
+.warehouse__save-button,
+.warehouse__cancel-link {
+	font-size: 0.8125rem;
+	width: 45%;
+
+	@include tablet {
+		width: 4.5rem;
+	}
+}
+
+.warehouse__cancel-button {
+	width: 100%;
+}
+
+.spacer2 {
+	min-height: 15rem;
+}

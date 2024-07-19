@@ -1,0 +1,19 @@
+@use "../../styles/partials/global" as *;
+
+.error-box {
+	@include flex-center-both;
+	flex-direction: column;
+	margin-top: 1rem;
+
+	height: 71vh;
+	&__wrapper {
+		@include flex-center-both;
+		width: 100%;
+		max-width: 600px;
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+}

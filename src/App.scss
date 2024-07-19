@@ -1,0 +1,121 @@
+@use "./styles/partials/global" as *;
+
+body {
+	padding: 0;
+	margin: 0;
+	color: $Instock-Black;
+	background-color: $Light-Grey;
+	font-family: "Titillium", Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 0.8125rem;
+	line-height: 1.25rem;
+	font-weight: 400;
+
+	@include tablet {
+		font-size: 0.875rem;
+		line-height: 1.375rem;
+	}
+}
+
+h1 {
+	font-size: 1.75rem;
+	line-height: 2.25rem;
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+}
+
+h2 {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+}
+
+h3 {
+	font-size: 0.8125rem;
+	line-height: 1.25rem;
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 0.875rem;
+		line-height: 1.375rem;
+	}
+}
+
+h4 {
+	font-size: 0.6875rem;
+	line-height: 1rem;
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 0.75rem;
+		line-height: 1.125rem;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link,
+a:visited {
+	color: $Instock-Indigo;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.in-stock {
+	background: $Green-7percent;
+	border: none;
+	border-radius: 20px;
+	color: $Green;
+	padding: 0.25rem 0.5rem;
+	font-size: 0.6875rem;
+	font-family: "Titillium";
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 0.75rem;
+	}
+}
+
+.out-stock {
+	background: $Red-7percent;
+	border: none;
+	border-radius: 20px;
+	color: $Red;
+	padding: 0.25rem 0.5rem;
+	font-size: 0.6875rem;
+	font-family: "Titillium";
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 0.75rem;
+	}
+}
+
+.sort-button {
+	width: 1rem;
+	height: 1rem;
+}
+
+.delete-button {
+	@include red-button;
+}
+
+.cancel-button {
+	@include white-button;
+}
